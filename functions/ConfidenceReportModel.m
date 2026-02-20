@@ -8,7 +8,7 @@ function Data = ConfidenceReportModel(Data, Params)
 %   Step 1 — Confidence mapping: estimates the mapping function ti = m(c)
 %     that converts statistically optimal confidence c (P(correct|percept))
 %     to time investment ti, by matching the model confidence distribution
-%     to the empirical waiting time distribution.
+%     to the empirical waiting time distribution (assuming monotonicity).
 %
 %   Step 2 — Confidence efficacy (alpha): fits or applies a single
 %     sub-optimality parameter alpha that controls how faithfully the
@@ -140,7 +140,7 @@ Data.Model.Zero.BeliefF = BeliefF;
 %% -----------------------------------------------------------------------
 %  STEP 1b: Estimate confidence mapping function ti = m(c)
 %  Calibrates model confidence to time investment units by matching the
-%  model confidence CDF to the empirical waiting time distribution.
+%  model confidence CDF to the empirical waiting time distribution (assuming monotonicity).
 %% -----------------------------------------------------------------------
 [ConfmatchOptimal, Data] = calibrate_confidence(abs(PerceptModel), Data, Params);
 

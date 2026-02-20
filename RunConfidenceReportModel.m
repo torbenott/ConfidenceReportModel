@@ -104,6 +104,8 @@ Params.Model.efficacy_type = 'randreplace';
 %% --- Model variant 1: shuffle control (alpha = 0) -----------------------
 % Confidence is randomly permuted, breaking the DV-confidence link.
 % This is the null model, no link between time investment and evidence.
+% Note that this model produces and uses the same mapping function m(c) as
+% the other models  (m(c) does not depend on alpha)
 Params.Model.Shuffle   = true;
 Params.Model.fit_alpha = false;
 Params.plotmapping     = false;
@@ -112,6 +114,8 @@ DataShuffle = ConfidenceReportModel(Data, Params);
 %% --- Model variant 2: optimal model (alpha = 1) -------------------------
 % Confidence is used perfectly to guide time investment (no time investment/metacognitive noise).
 % Upper bound for the confidence signatures.
+% Note that this model produces and uses the same mapping function m(c) as
+% the other models  (m(c) does not depend on alpha)
 Params.Model.Shuffle   = false;
 Params.Model.fit_alpha = false;
 Params.Model.alpha     = 1;
@@ -123,6 +127,8 @@ DataOptimal = ConfidenceReportModel(Data, Params);
 % distribution given the model. Alpha captures the degree to which the
 % subject's time investment tracks their statistical confidence (efficacy).
 % Plots the mapping function m(c) in panel 5 and the LL curve in panel 6.
+% Note that this model produces and uses the same mapping function m(c) as
+% the other models  (m(c) does not depend on alpha)
 Params.Model.Shuffle   = false;
 Params.Model.fit_alpha = true;
 Params.plotmapping     = true;
