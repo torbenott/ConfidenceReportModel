@@ -20,7 +20,7 @@ data/
 ```
 
 **Requirements:** MATLAB R2020b or later, Optimization Toolbox
-This code was tested on a Windows 11 computer with standard hardware and MATLAB2020b as well as 2025b. For installation, clone the repository and run RunConfidenceReportModel.m. Installation time less than 1 min, expected run time of demo script with simulated data less than 1 min. 
+This code was tested on a Windows 11 computer with standard hardware and MATLAB2024b and 2025b. For installation, clone the repository and run RunConfidenceReportModel.m. Installation time less than 1 min, expected run time of demo script with simulated data less than 1 min. 
 
 
 ## Output
