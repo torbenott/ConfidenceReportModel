@@ -135,6 +135,7 @@ if Params.plotc
     if Params.Label
         xlabel('Evidence (delta-click / sum-click)');
         ylabel('P(Choice left)');
+        
     end
 
     % Overlay fitted curve
@@ -161,6 +162,8 @@ if Params.plotc
 
     ylim([-0.05, 1.05]);
     xlim([min(x) - 0.01, max(x) + 0.01]);
+    l=legend({'Fit','Data'});
+    l.Location='northwest';
 end
 
 end

@@ -196,6 +196,8 @@ if Params.Label
     xlabel('Evidence (delta-click / sum-click)');
     ylabel('Time investment (s)');
     title('Vevaiometric');
+    l=legend({'Correct','Error'});
+    l.Location='northwest';
 end
 xlim(xlim_dv);
 
@@ -273,9 +275,10 @@ if Params.Label
     xlabel('Evidence (delta-click / sum-click)');
     ylabel('P(correct)');
     title('Conditioned psychometric');
-    legend({['TI > ', num2str(round(ConfHigh*100)/100), ' s'], ...
+    l=legend({['TI > ', num2str(round(ConfHigh*100)/100), ' s'], ...
             ['TI \leq ', num2str(round(ConfLow*100)/100), ' s']}, ...
            'Location', 'SouthEast');
+    l.Box='on';
 end
 xlim(xlim_dv);
 ylim([0.5, 1]);
