@@ -284,6 +284,6 @@ xlim(xlim_dv);
 ylim([0.5, 1]);
 set(gca, 'YTick', 0.5:0.25:1, 'YTickLabel', 0.5:0.25:1);
 
-RedoTicks(gcf);
+% RedoTicks(gcf);
 
 end
