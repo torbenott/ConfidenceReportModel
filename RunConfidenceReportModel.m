@@ -35,6 +35,7 @@ DATAPATH   = fullfile(SCRIPTPATH, 'data');
 DATAFILE   = 'InvestmentAgentData.mat';
 
 addpath(fullfile(SCRIPTPATH, 'functions'));
+
 rng(1);  % fix random seed for reproducibility
 
 %% --- Load simulated agent data ------------------------------------------

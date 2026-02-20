@@ -134,7 +134,7 @@ if Params.plotc
 
     if Params.Label
         xlabel('Evidence (delta-click / sum-click)');
-        ylabel('Choice A');
+        ylabel('P(Choice left)');
     end
 
     % Overlay fitted curve
